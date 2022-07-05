@@ -17,7 +17,7 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img :src="slides[index].image" alt="" v-on:mouseover="stopTimer()" />
+                    <img :src="slides[index].image" alt="" v-on:mouseover="stopTimer()" v-on:mouseleave="timer()"/>
                     <div class="text">
                         <h3>{{slides[index].title}}</h3>
                         <p>
