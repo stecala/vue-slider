@@ -62,12 +62,12 @@ const app = new Vue({
             this.index = 4;
         },
         timer(){
-            timerZero = setInterval(()=>{
+            this.timerZero = setInterval(()=>{
                 this.nextSlide();
             },3000)
         },
         stopTimer(){
-            clearInterval(timerInterval);
+            clearInterval(this.timerZero);
         },
     },
     created (){
