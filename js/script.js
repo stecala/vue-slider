@@ -38,7 +38,28 @@ const app = new Vue({
             if(this.index === this.slides.length){
                 this.index=0;
             }
-        }
+        },
+        prevSlide(){
+            this.index --;
+            if(this.index === -1){
+                this.index = this.slides.length-1;
+            }
+        },
+        thumbFirstElement(){
+            this.index = 0;
+        },
+        thumbSecondElement(){
+            this.index = 1;
+        },
+        thumbThirdElement(){
+            this.index = 2;
+        },
+        thumbFourthElement(){
+            this.index = 3;
+        },
+        thumbFifthElement(){
+            this.index = 4;
+        },
     },
 })
 

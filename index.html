@@ -27,22 +27,22 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
+                    <div @click="prevSlide()" class="prev"></div>
                     <div @click="nextSlide" class="next"></div>
                     <div class="thumb active">
-                        <img src="img/01.jpg" alt="Svezia"/>
+                        <img @click="thumbFirstElement" src="img/01.jpg" alt="Svezia"/>
                     </div>
                     <div class="thumb">
-                        <img src="img/02.jpg" alt="Svizzera" />
+                        <img @click="thumbSecondElement" src="img/02.jpg" alt="Svizzera" />
                     </div>
                     <div class="thumb">
-                        <img src="img/03.jpg" alt="Gran Bretagna" />
+                        <img @click="thumbThirdElement" src="img/03.jpg" alt="Gran Bretagna" />
                     </div>
                     <div class="thumb">
-                        <img src="img/04.jpg" alt="Germania" />
+                        <img @click="thumbFourthElement" src="img/04.jpg" alt="Germania" />
                     </div>
                     <div class="thumb">
-                        <img src="img/05.jpg" alt="Paradise" />
+                        <img @click="thumbFifthElement" src="img/05.jpg" alt="Paradise" />
                     </div>
                 </div>
 
