@@ -2,6 +2,7 @@ const app = new Vue({
     el : '#app',
     data : {
         index : 0,
+        timerZero : null,
 
         slides : [
             {
@@ -60,7 +61,18 @@ const app = new Vue({
         thumbFifthElement(){
             this.index = 4;
         },
+        timer(){
+            let timerInterval = setInterval(()=>{
+                this.index ++;
+                if(this.index === this.slides.length){
+                this.index=0;
+                }
+            },3000)
+        },
     },
+    created (){
+        this.timer();
+    }
 })
 
 
