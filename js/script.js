@@ -46,7 +46,7 @@ const app = new Vue({
                 this.index = this.slides.length-1;
             }
         },
-        thumbFirstElement(){
+     /*    thumbFirstElement(){
             this.index = 0;
         },
         thumbSecondElement(){
@@ -60,6 +60,9 @@ const app = new Vue({
         },
         thumbFifthElement(){
             this.index = 4;
+        }, */
+        thumbElement(index){
+            this.index = index;
         },
         timer(){
             this.timerZero = setInterval(()=>{
@@ -69,6 +72,9 @@ const app = new Vue({
         stopTimer(){
             clearInterval(this.timerZero);
         },
+        isActive(index){
+            return this.index==index;
+        }
     },
     created (){
         this.timer();
