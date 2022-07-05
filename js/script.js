@@ -2,7 +2,7 @@ const app = new Vue({
     el : '#app',
     data : {
         index : 0,
-        timerZero : null,
+        timerZero : '',
 
         slides : [
             {
@@ -62,12 +62,12 @@ const app = new Vue({
             this.index = 4;
         },
         timer(){
-            let timerInterval = setInterval(()=>{
-                this.index ++;
-                if(this.index === this.slides.length){
-                this.index=0;
-                }
+            timerZero = setInterval(()=>{
+                this.nextSlide();
             },3000)
+        },
+        stopTimer(){
+            clearInterval(timerInterval);
         },
     },
     created (){
