@@ -20,7 +20,7 @@
 
                 <div class="item">
                     <img :src="slides[index].image" alt="" v-on:mouseover="stopTimer()" v-on:mouseleave="timer()" />
-                    <div class="text">
+                    <div class="text" v-on:mouseover="stopTimer()" v-on:mouseleave="timer()">
                         <h3>{{slides[index].title}}</h3>
                         <p>
                             {{slides[index].text}}
@@ -47,7 +47,7 @@
                         <img @click="thumbFifthElement" src="img/05.jpg" alt="Paradise" />
                     </div> -->
                     <div v-for="(element, index) in slides" class="thumb" :class="(isActive(index)) ? 'active' : '' ">
-                        <img @click="thumbElement(index)" :src="slides[index].image" alt="slides[index.title]" >
+                        <img @click="thumbElement(index)" :src="element.image" alt="element.title" >
                     </div>
                 </div>
 
